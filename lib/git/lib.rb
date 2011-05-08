@@ -557,6 +557,10 @@ module Git
     def fetch(remote)
       command('fetch', remote)
     end
+
+    def pull(remote, branch)
+      command('pull', [remote, branch])
+    end
     
     def push(remote, branch = 'master', tags = false)
       command('push', [remote, branch])

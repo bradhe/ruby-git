@@ -1,5 +1,4 @@
 module Git
-  
   class Base
 
     # opens a bare Git Repository - no working directory options
@@ -321,8 +320,9 @@ module Git
 
     # fetches a branch from a remote and merges it into the current working branch
     def pull(remote = 'origin', branch = 'master', message = 'origin pull')
-      fetch(remote)
-      merge(branch, message)
+      #fetch(remote)
+      #merge(branch, message)
+      self.lib.pull(remote, branch)
     end
     
     # returns an array of Git:Remote objects
